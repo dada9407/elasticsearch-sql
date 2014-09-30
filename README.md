@@ -3,7 +3,26 @@ elasticsearch-sql
 
  Elasticsearch SQL 查询插件
 
- 支持类SQL的SELECT 查询语句
+ 支持类SQL的SELECT 查询语句，编译后可以直接放在Elasticsearch的plugins目录。
+
+ 采用ANtlr3解析SQL，翻译成Elasticsearch的查询结构，在Elasticsearch1.3.0下编译。
+
+ .search RESTfull
+ http://localhost:9200/_sql?sql=select * from * limit 10
+
+ .SQL explain RESTfull
+ http://localhost:9200/_sql/_explain?sql=select * from * limit 10
+
+
+SEARCH SYNTAX
+=================
+ selectClause 
+    fromClause 
+    whereClause? 
+    limitClause? 
+        groupClause? 
+        facetClause* 
+        orderClause?
 
 
  主要功能
