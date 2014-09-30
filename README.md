@@ -47,7 +47,7 @@ select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include
 15.select sum(num) from * date_his @timestamp 1d
 16.select count(*) from "logstash*" group by @team  top_hits 1 sort by @timestamp asc include *
 
- 期望功能
+期望功能
 =================
 1. 支持子查询
 2. 增加常用函数，优化script结构。
@@ -55,6 +55,6 @@ select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include
 
 联系
 =================
-dada9407@163.com
-303940973
-chuanyi.chen@gmail.com
+e-mail:dada9407@163.com
+e-mail:chuanyi.chen@gmail.com
+QQ:303940973
