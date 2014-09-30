@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Export-Package: i.ilog.esdsl;version="1.0.0"
+Built-By: chen_chuanyi
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: esdsl
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.7.0_45
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1393225450826
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: i.ilog.esdsl
+Import-Package: org.antlr.stringtemplate;resolution:=optional,
+  org.apache.commons.beanutils;version="[1.8,2)",
+  org.apache.commons.collections.map;version="[3.2,4)",
+  org.apache.commons.lang;version="[2.5,3)",
+  org.apache.commons.lang.builder;version="[2.5,3)",
+  org.apache.commons.lang.exception;version="[2.5,3)",
+  org.apache.commons.lang.math;version="[2.5,3)",
+  org.apache.commons.logging,
+  org.apache.oro.text.regex;resolution:=optional,
+  org.codehaus.groovy.reflection;resolution:=optional,
+  org.codehaus.groovy.runtime;resolution:=optional,
+  org.codehaus.groovy.runtime.callsite;resolution:=optional,
+  org.codehaus.groovy.runtime.typehandling;resolution:=optional,
+  org.codehaus.groovy.runtime.wrappers;resolution:=optional,
+  org.stringtemplate.v4;resolution:=optional,
+  org.stringtemplate.v4.compiler;resolution:=optional,
+  org.stringtemplate.v4.gui;resolution:=optional,
+  org.stringtemplate.v4.misc;resolution:=optional
+Archiver-Version: Plexus Archiver
+
