@@ -8,14 +8,13 @@ elasticsearch-sql
  采用ANtlr3解析SQL，翻译成Elasticsearch的查询结构，在Elasticsearch1.3.0下编译。
 
 ### search RESTfull
-    http://localhost:9200/_sql?sql=select * from * limit 10
+    http://localhost:9200/`_sql`?`sql`=select * from * limit 10
 
 ### SQL explain RESTfull
-    http://localhost:9200/_sql/_explain?sql=select * from * limit 10
+    http://localhost:9200/`_sql/_explain`?sql=select * from * limit 10
 
 
 ### SEARCH SYNTAX
-=================
     selectClause 
         fromClause 
         whereClause? 
@@ -31,20 +30,20 @@ elasticsearch-sql
 2. 支持指定多个Elasticsearch的index和mapping type结构
 3. SELECT 列表支持函数表达式script('script section')
 4. WHERE 支持函数表达式script('script section')
-5. 支持group by;同时group by 也支持函数表达式script('script section')
-6. 支持Elasticsearch Aggs统计功能。目前实现了date histogram和TopHitsFacet
-7. 支持order by
-8. 支持count、max、min、avg、sum统计函数
+5. 支持`group by`;同时group by 也支持函数表达式`script('script section')`
+6. 支持`Elasticsearch Aggs`统计功能。目前实现了`date histogram`和`TopHitsFacet`
+7. 支持`order by`
+8. 支持`count`、`max`、`min`、`avg`、`sum`统计函数
 
 Date Histogram
 =================
 语法结构: date_his 时间字段 统计间隔 AS:
-select count(*) from * date_his @timestamp 1d   -> 按天统计日志数量
+        select count(*) from * date_his @timestamp 1d   -> 按天统计日志数量
 
 Top Hits 
 =================
 语法结构: top_hits 条数 SORT BY 字段列表 INCLUDE 返回字段列表(*表示全部):
-select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include * -->按@team分组，返回每组按@timestamp字段排序后的记录。
+        select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include * -->按@team分组，返回每组按@timestamp字段排序后的记录。
 
 
  例句
@@ -69,11 +68,11 @@ select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include
 期望功能
 =================
 1. 支持子查询
-2. 增加常用函数，优化script结构。
-3. 全面支持其他Aggregations 功能。
+2. 增加常用函数，优化`script`结构。
+3. 全面支持其他`Aggregations` 功能。
 
 联系
 =================
-e-mail:dada9407@163.com
-e-mail:chuanyi.chen@gmail.com
-QQ:303940973
+* e-mail:dada9407@163.com
+* e-mail:chuanyi.chen@gmail.com
+* QQ:303940973
