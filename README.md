@@ -37,13 +37,13 @@ elasticsearch-sql
 
 Date Histogram
 =================
-语法结构: date_his 时间字段 统计间隔 AS:
-        select count(*) from * date_his @timestamp 1d   -> 按天统计日志数量
+       语法结构: date_his 时间字段 统计间隔 AS:
+       select count(*) from * date_his @timestamp 1d   -> 按天统计日志数量
 
 Top Hits 
 =================
-语法结构: top_hits 条数 SORT BY 字段列表 INCLUDE 返回字段列表(*表示全部):
-        select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include * -->按@team分组，返回每组按@timestamp字段排序后的记录。
+       语法结构: top_hits 条数 SORT BY 字段列表 INCLUDE 返回字段列表(*表示全部):
+       select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include * -->按@team分组，返回每组按@timestamp字段排序后的记录。
 
 
  例句
