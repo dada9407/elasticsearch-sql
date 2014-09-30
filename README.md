@@ -8,10 +8,10 @@ elasticsearch-sql
  采用ANtlr3解析SQL，翻译成Elasticsearch的查询结构，在Elasticsearch1.3.0下编译。
 
 ### search RESTfull
-    http://localhost:9200/`_sql`?`sql`=select * from * limit 10
+    http://localhost:9200/_sql?sql=select * from * limit 10
 
 ### SQL explain RESTfull
-    http://localhost:9200/`_sql/_explain`?sql=select * from * limit 10
+    http://localhost:9200/_sql/_explain?sql=select * from * limit 10
 
 
 ### SEARCH SYNTAX
