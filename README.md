@@ -17,6 +17,16 @@ elasticsearch-sql
 7. 支持order by
 8. 支持count、max、min、avg、sum统计函数
 
+Date Histogram
+=================
+语法结构: date_his 时间字段 统计间隔 AS:
+select count(*) from * date_his @timestamp 1d   -> 按天统计日志数量
+
+Top Hits 
+=================
+语法结构: top_hits 条数 SORT BY 字段列表 INCLUDE 返回字段列表(*表示全部):
+select count(*) from * group by @team  top_hits 1 sort by @timestamp asc include * -->按@team分组，返回每组按@timestamp字段排序后的记录。
+
 
  例句
 =================
@@ -36,3 +46,15 @@ elasticsearch-sql
 14.select * from * where @timestamp>="2014-01-28T00:00:00.000Z"
 15.select sum(num) from * date_his @timestamp 1d
 16.select count(*) from "logstash*" group by @team  top_hits 1 sort by @timestamp asc include *
+
+ 期望功能
+=================
+1. 支持子查询
+2. 增加常用函数，优化script结构。
+3. 全面支持其他Aggregations 功能。
+
+联系
+=================
+dada9407@163.com
+303940973
+chuanyi.chen@gmail.com
