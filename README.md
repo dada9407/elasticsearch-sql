@@ -16,13 +16,13 @@ elasticsearch-sql
 
 ### SEARCH SYNTAX
 =================
- selectClause 
-    fromClause 
-    whereClause? 
-    limitClause? 
-        groupClause? 
-        facetClause* 
-        orderClause?
+    selectClause 
+        fromClause 
+        whereClause? 
+        limitClause? 
+            groupClause? 
+            facetClause* 
+            orderClause?
 
 
  主要功能
